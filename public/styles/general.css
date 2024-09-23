@@ -6,6 +6,7 @@
   --border-radius: 42px;
   --small-border-radius: 20px;
 
+  /* padding */
   --small-padding: 4px 16px;
   --big-padding: 15px 45px;
   --big-bottom-padding: 35px 25px;
@@ -15,6 +16,9 @@
   --even-padding-m: 45px;
   --even-padding-l: 55px;
 
+  /* colors */
+  --beige: #efeae6;
+  --black: #050b07;
   /* font sizes */
 
   --fluid-h1: clamp(2.8125rem, 2.5951rem + 1.087vw, 3.4375rem);
