@@ -9,12 +9,25 @@ import HeaderShape from "../components/HeaderShape.astro";
     <h1>overskrift</h1>
   </article>
   <article id="about">
-    <HeaderShape hText="about me" shape="orange_shape" />
-    <p>
-      Som kreativ frontend-designer vil jeg udvikle fleksibel og responsiv kode,
-      der kan genbruges. Jeg arbejder både selvstændigt og i teams og er
-      energisk i min læring og udvidelse af min viden om kodning.
-    </p>
+    <section class="sectionShape">
+      <HeaderShape hText="hej! mit navn er Jules" shape="orange_shape" />
+      <h3>jeg er en <em> MMD front-end udvilker </em> under uddanelse</h3>
+      <p>
+        Som kreativ frontend-udvikler fokuserer jeg på at skabe fleksibel,
+        responsiv og genanvendelig kode. Jeg er ivrig efter at udvide mine
+        kompetencer inden for forskellige frameworks og teknologier. Jeg
+        arbejder både selvstændigt og i teams og er altid energisk og nysgerrig,
+        når det kommer til at lære og udvikle mine færdigheder. Mit mål er at
+        sikre, at brugerne får en optimal oplevelse, når de besøger hjemmesiden.
+        Under min uddannelse har jeg udviklet omkring 10 hjemmesider, og jeg ser
+        frem til at bygge endnu flere i fremtiden.
+      </p>
+      <img
+        class="hover duration4s"
+        src="../../public/img/yellow_form.svg"
+        alt="orange shape"
+      />
+    </section>
   </article>
   <article id="task">
     <h2>task</h2>
@@ -33,7 +46,30 @@ import HeaderShape from "../components/HeaderShape.astro";
 </Layout>
 
 <style>
+  .sectionShape {
+    position: relative;
+    & * > :not(img) {
+      z-index: 1;
+    }
+    & img {
+      position: absolute;
+      bottom: -40%;
+      right: 10%;
+      width: 40%;
+      height: auto;
+      z-index: -1;
+      opacity: 90%;
+    }
+  }
+
   #skills {
+    border-bottom: var(--black) 1px dashed;
+    border-top: var(--black) 1px dashed;
+  }
+  #about {
+    em {
+      color: var(--orange);
+    }
   }
 
   article {

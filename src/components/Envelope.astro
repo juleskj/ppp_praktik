@@ -2,11 +2,23 @@
 
 ---
 
-<div class="contact_container">
+<div class="contact_container hover">
   <div class="round_text">
     <a href="/#footer"></a>
   </div>
 </div>
+
+<script>
+  window.onscroll = function (event) {
+    if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight) {
+      document.querySelector(".contact_container").classList.add("disappear");
+    } else {
+      document
+        .querySelector(".contact_container")
+        .classList.remove("disappear");
+    }
+  };
+</script>
 
 <style>
   @media (800px < width) {
@@ -14,7 +26,7 @@
       position: sticky;
       top: 60%;
       margin-left: auto;
-      animation: hover_kf 3s ease-in-out infinite;
+
       background-color: var(--beige);
       border-radius: 50%;
 
@@ -55,26 +67,22 @@
     }
   }
 
-  @keyframes spin_kf {
-    0% {
-      transform: rotate(0deg);
-    }
+  .disappear {
+    animation: disappear_kf 1s ease-out 1;
 
-    100% {
-      transform: rotate(360deg);
-    }
+    animation-fill-mode: both;
   }
 
-  @keyframes hover_kf {
-    0% {
-      transform: translateY(10px);
+  @keyframes disappear_kf {
+    from {
+      opacity: 1;
+      transform: scaleX(1);
     }
 
-    50% {
-      transform: translateY(-10px);
-    }
-    100% {
-      transform: translateY(10px);
+    to {
+      opacity: 0;
+      transform: scaleX(0);
+      transform: translateY(100px);
     }
   }
 </style>

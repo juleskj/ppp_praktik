@@ -5,15 +5,21 @@ const { hText, shape } = Astro.props;
 <h2 class={shape}>{hText}</h2>
 
 <style>
+  :root {
+    --shape-width: 100px;
+  }
+
   h2 {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    &::first-letter {
+      text-transform: capitalize;
+    }
   }
   h2::before {
     content: "";
     display: inline-block;
-
     background-repeat: no-repeat;
     background-size: contain;
     margin-right: -50px;
@@ -21,12 +27,12 @@ const { hText, shape } = Astro.props;
 
   .blue_shape::before {
     background-image: url("../../public/img/blue_form.svg");
-    min-width: 100px;
-    min-height: 100px;
+    min-width: var(--shape-width);
+    min-height: var(--shape-width);
   }
   .orange_shape::before {
     background-image: url("../../public/img/orange_form.svg");
-    min-width: 100px;
-    min-height: 100px;
+    min-width: var(--shape-width);
+    min-height: var(--shape-width);
   }
 </style>

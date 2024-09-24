@@ -124,17 +124,17 @@ button {
   --flow-space: 0.5rlh;
 }
 
-.popup {
+.appear {
   view-timeline: --subjectReveal block;
   animation-timeline: --subjectReveal;
 
-  animation-name: appear;
+  animation-name: appear_kf;
   animation-range-start: cover -50%;
   animation-fill-mode: both;
   animation-duration: 1ms; /* Firefox requires this to apply the animation */
 }
 
-@keyframes appear {
+@keyframes appear_kf {
   from {
     opacity: 0;
     transform: scaleX(0);
@@ -146,10 +146,43 @@ button {
   }
 }
 
-.flex_row {
-  display: flex;
-  flex-flow: wrap row;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1rem;
+.spin {
+  animation: spin_kf 10s linear infinite;
+}
+
+@keyframes spin_kf {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hover {
+  animation: hover_kf 3s ease-in-out infinite;
+}
+
+@keyframes hover_kf {
+  0% {
+    transform: translateY(10px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+.duration4s {
+  animation-duration: 4s;
+}
+.delay6s {
+  animation-duration: 6s;
+}
+.delay8s {
+  animation-duration: 8s;
 }
