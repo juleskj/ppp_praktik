@@ -2,4 +2,20 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Forside" />
+<Layout title="Forside">
+  <article class="full-bleed hero">
+    <h1>overskrift</h1>
+  </article>
+  <article id="about">
+    <h2>about me</h2>
+  </article>
+  <article id="task"><h2>task</h2></article>
+  <article id="skills"><h2>skills</h2></article>
+  <article id="projekts"><h2>projekts</h2></article>
+</Layout>
+
+<style>
+  article {
+    height: 100vh;
+  }
+</style>

@@ -1,0 +1,50 @@
+---
+
+---
+
+<header class="full-bleed">
+  <nav>
+    <ul>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#task">Projekt</a></li>
+      <li><a href="/#skills">Skills</a></li>
+      <li><a href="/#projekts">Projekt</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  header {
+    background-color: white;
+    position: sticky;
+    top: 0;
+  }
+  nav {
+    padding: var(--small-padding);
+    margin: 10px;
+  }
+  li {
+    display: contents;
+    list-style-type: none;
+  }
+
+  ul {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  a {
+    padding: var(--small-padding);
+    border-bottom: var(--black) 2px solid;
+    text-decoration: none;
+    color: var(--black);
+    &:hover {
+      transition: 0.2s;
+      background-color: var(--black);
+      color: var(--beige);
+    }
+  }
+</style>

@@ -35,27 +35,38 @@ h3,
 h4,
 h5,
 h6 {
+  color: var(--black);
   font-family: "Cabin", sans-serif;
   font-style: normal;
   font-weight: 600;
+  &::first-letter {
+    text-transform: capitalize;
+  }
 }
+
 h1 {
   font-size: var(--fluid-h1);
+  font-family: "Asap", sans-serif;
 }
 h2 {
   font-size: var(--fluid-h2);
+  font-family: "Source Code Pro", monospace;
 }
 h3 {
   font-size: var(--fluid-h3);
+  font-family: "Source Code Pro", monospace;
 }
 h4 {
   font-size: var(--fluid-h4);
+  font-family: "Source Code Pro", monospace;
 }
 h5 {
   font-size: var(--fluid-h5);
+  font-family: "Source Code Pro", monospace;
 }
 h6 {
   font-size: var(--fluid-h6);
+  font-family: "Source Code Pro", monospace;
 }
 
 p {
@@ -65,7 +76,8 @@ p {
 p,
 ul,
 ol {
-  font-family: "Lato", sans-serif;
+  font-family: "Anaheim", sans-serif;
+  color: var(--black);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
