@@ -1,16 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Envelope from "../components/Envelope.astro";
+import SkillList from "../components/SkillList.astro";
+import HeaderShape from "../components/HeaderShape.astro";
 ---
 
 <Layout title="Forside">
-  <Envelope />
-
   <article class="full-bleed hero">
     <h1>overskrift</h1>
   </article>
   <article id="about">
-    <h2>about me</h2>
+    <HeaderShape hText="about me" shape="orange_shape" />
+    <p>
+      Som kreativ frontend-designer vil jeg udvikle fleksibel og responsiv kode,
+      der kan genbruges. Jeg arbejder både selvstændigt og i teams og er
+      energisk i min læring og udvidelse af min viden om kodning.
+    </p>
   </article>
   <article id="task">
     <h2>task</h2>
@@ -21,63 +25,18 @@ import Envelope from "../components/Envelope.astro";
       reiciendis iusto velit quas et hic?
     </p>
   </article>
-  <article id="skills">
-    <h2>skills</h2>
-    <ul>
-      <lh>kode sprog</lh>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JS</li>
-      <lh>Værktøj og programmer</lh>
-      <li>astro</li>
-      <li>react</li>
-      <li>github</li>
-      <li>vscode</li>
-      <li>illustrator</li>
-    </ul>
+  <article id="skills" class="full-bleed">
+    <HeaderShape hText="My skills" shape="blue_shape" />
+    <SkillList />
   </article>
   <article id="projekts"><h2>projekts</h2></article>
-  <footer id="footer">
-    <nav>
-      <ul>
-        <li>
-          <a href="https://www.linkedin.com/in/julie-kristina-jensen-7430502a2/"
-            >Linkedin</a
-          >
-        </li>
-        <li><a href="https://github.com/juleskj">Github</a></li>
-        <li><a href="https://codepen.io/Juliekj">Codepen</a></li>
-      </ul>
-    </nav>
-  </footer>
 </Layout>
 
 <style>
   #skills {
-    li {
-      &::first-letter {
-        text-transform: capitalize;
-      }
-    }
-  }
-  h2::before {
-    /* content: "";
-
-    background-image: url("/public/img/orange_form.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100px;
-    height: 100px; */
   }
 
-  footer {
-    & a {
-      &::first-letter {
-        text-transform: capitalize;
-      }
-    }
-  }
   article {
-    margin: 100px 0;
+    padding: 100px 0;
   }
 </style>

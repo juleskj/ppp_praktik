@@ -1,0 +1,53 @@
+---
+import StarPoint from "./StarPoint.astro";
+---
+
+<div class="skill_list">
+  <ul>
+    <lh>kode sprog</lh>
+    <StarPoint list_text="HTML" starPoints="star_4" />
+    <StarPoint list_text="CSS" starPoints="star_4" />
+    <StarPoint list_text="JS" starPoints="star_3" />
+  </ul>
+  <ul>
+    <lh>Værktøj og programmer</lh>
+    <StarPoint list_text="astro" starPoints="star_3" />
+    <StarPoint list_text="react" starPoints="star_1" />
+    <StarPoint list_text="github" starPoints="star_3" />
+    <StarPoint list_text="vs-code" starPoints="star_4" />
+    <StarPoint list_text="illustrator" starPoints="star_3" />
+  </ul>
+  <ul>
+    <lh>emner</lh>
+    <StarPoint list_text="UX" starPoints="star_3" />
+    <StarPoint list_text="UI" starPoints="star_3" />
+  </ul>
+</div>
+
+<style>
+  .skill_list {
+    display: flex;
+    flex-flow: wrap row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem 4rem;
+
+    @media (width > 800px) {
+      & :last-child:has(:nth-child(odd)) {
+        margin: 2rem auto 0 auto;
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-flow: column;
+    gap: 0.5rem;
+    flex: 1 1 400px;
+    max-width: 65ch;
+    text-transform: capitalize;
+
+    & lh {
+    }
+  }
+</style>

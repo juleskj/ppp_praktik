@@ -19,6 +19,10 @@
   /* colors */
   --beige: #efeae6;
   --black: #050b07;
+  --orange: #e9543b;
+  --blue: #3b4294;
+  --light-blue: #94d4ee;
+  --yellow: #f9cd73;
   /* font sizes */
 
   --fluid-h1: clamp(2.8125rem, 2.5951rem + 1.087vw, 3.4375rem);
@@ -34,7 +38,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+lh {
   color: var(--black);
   font-family: "Cabin", sans-serif;
   font-style: normal;
@@ -139,4 +144,12 @@ button {
     opacity: 1;
     transform: scaleX(1);
   }
+}
+
+.flex_row {
+  display: flex;
+  flex-flow: wrap row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
 }

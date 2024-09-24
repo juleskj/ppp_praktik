@@ -1,0 +1,52 @@
+---
+
+---
+
+<footer class="full-bleed" id="footer">
+  <nav>
+    <ul>
+      <li>
+        <a href="https://www.linkedin.com/in/julie-kristina-jensen-7430502a2/"
+          >Linkedin</a
+        >
+      </li>
+      <li><a href="https://github.com/juleskj">Github</a></li>
+      <li><a href="https://codepen.io/Juliekj">Codepen</a></li>
+      <li><a href="mailto:juje0003@stud.kea.dk">email</a></li>
+    </ul>
+  </nav>
+</footer>
+
+<style>
+  footer {
+    margin: 100px 0 0 0;
+    padding: var(--even-padding-l);
+    background-color: var(--black);
+
+    & ul {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+
+      & li {
+        list-style-type: none;
+      }
+    }
+
+    & a {
+      padding: var(--small-padding);
+      text-decoration: none;
+      text-transform: capitalize;
+      color: var(--beige);
+      border-bottom: var(--beige) 2px solid;
+
+      &:hover {
+        transition: 0.2s;
+        background-color: var(--beige);
+        color: var(--black);
+      }
+    }
+  }
+</style>

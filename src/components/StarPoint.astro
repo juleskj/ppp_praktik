@@ -1,0 +1,42 @@
+---
+const { starPoints, list_text } = Astro.props;
+---
+
+<li class={starPoints}>{list_text}</li>
+
+<style>
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: var(--blue) 1px solid;
+    gap: 1rem;
+  }
+
+  li::after {
+    content: "";
+    display: inline-block;
+    width: 150px;
+    height: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .star_1::after {
+    background-image: url("../../public/img/stars1-5.svg");
+  }
+  .star_2::after {
+    background-image: url("../../public/img/stars2-5.svg");
+  }
+  .star_3::after {
+    background-image: url("../../public/img/stars3-5.svg");
+  }
+  .star_4::after {
+    background-image: url("../../public/img/stars4-5.svg");
+  }
+  .star_5::after {
+    background-image: url("../../public/img/stars5-5.svg");
+  }
+</style>
