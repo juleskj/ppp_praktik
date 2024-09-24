@@ -1,0 +1,63 @@
+---
+
+---
+
+<div class="contact_container">
+  <div class="round_text">
+    <a href="/#footer"></a>
+  </div>
+</div>
+
+<style>
+  .contact_container {
+    grid-column: full-end;
+    position: sticky;
+    top: 72%;
+    margin-right: 10px;
+
+    & .round_text {
+      display: flex;
+      width: 160px;
+      height: 160px;
+      justify-content: center;
+      align-items: center;
+      &::after {
+        content: "";
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        background-image: url("../../public/img/contact_text.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        animation: spin_kf 8s linear infinite;
+        z-index: 0;
+      }
+    }
+
+    & a {
+      display: block;
+      width: 80px;
+      height: 80px;
+      background-image: url("../../public/img/closed_envelope.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-bottom: 25px;
+      z-index: 1;
+
+      &:hover {
+        transition: 0.2s;
+        background-image: url("../../public/img/open_envolope.svg");
+      }
+    }
+  }
+
+  @keyframes spin_kf {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style>

@@ -64,7 +64,8 @@ h5 {
   font-size: var(--fluid-h5);
   font-family: "Source Code Pro", monospace;
 }
-h6 {
+h6,
+lh {
   font-size: var(--fluid-h6);
   font-family: "Source Code Pro", monospace;
 }
