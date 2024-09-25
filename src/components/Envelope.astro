@@ -23,17 +23,18 @@
 <style>
   @media (800px < width) {
     .contact_container {
-      position: sticky;
-      top: 60%;
-      margin-left: auto;
-
-      background-color: var(--beige);
-      border-radius: 50%;
+      position: fixed;
+      bottom: 20%;
+      right: 5%;
+      z-index: 9;
 
       & .round_text {
-        display: flex;
+        background-color: var(--beige);
+        border-radius: 50%;
         width: 160px;
         height: 160px;
+
+        display: flex;
         justify-content: center;
         align-items: center;
         &::after {
@@ -69,7 +70,6 @@
 
   .disappear {
     animation: disappear_kf 1s ease-out 1;
-
     animation-fill-mode: both;
   }
 
