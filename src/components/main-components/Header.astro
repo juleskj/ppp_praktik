@@ -2,6 +2,19 @@
 
 ---
 
+<script>
+  const header = document.querySelector("header");
+  document.addEventListener("scroll", function () {
+    console.log("der scrolles");
+
+    if (scrollY > 10) {
+      header.style.backgroundColor = "white";
+    } else {
+      header.style.backgroundColor = "var(--yellow)";
+    }
+  });
+</script>
+
 <header class="full-bleed">
   <nav>
     <ul>
@@ -15,7 +28,7 @@
 
 <style>
   header {
-    background-color: white;
+    background-color: var(--yellow);
     position: sticky;
     top: 0;
     z-index: 10;

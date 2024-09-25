@@ -18,11 +18,12 @@
 
   /* colors */
   --beige: #efeae6;
-  --black: #050b07;
+  --black: #131313;
+  --white: #fffef5;
   --orange: #e9543b;
   --blue: #3b4294;
   --light-blue: #94d4ee;
-  --yellow: #f9cd73;
+  --yellow: #f4c872;
   /* font sizes */
 
   --fluid-h1: clamp(2.8125rem, 2.5951rem + 1.087vw, 3.4375rem);

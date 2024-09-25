@@ -13,8 +13,9 @@ const { hText, shape } = Astro.props;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-
-    text-transform: capitalize;
+    &::first-letter {
+      text-transform: capitalize;
+    }
   }
   h2::before {
     content: "";

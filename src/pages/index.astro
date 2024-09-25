@@ -21,13 +21,9 @@ import HeroText from "../components/HeroText.astro";
         Under min uddannelse har jeg udviklet omkring 10 hjemmesider, og jeg ser
         frem til at bygge endnu flere i fremtiden.
       </p>
-      <img
-        class="hover duration4s"
-        src="../../public/img/yellow_form.svg"
-        alt="orange shape"
-      />
     </section>
   </article>
+
   <article id="task">
     <h2>task</h2>
     <p>
@@ -37,14 +33,127 @@ import HeroText from "../components/HeroText.astro";
       reiciendis iusto velit quas et hic?
     </p>
   </article>
+
   <article id="skills" class="full-bleed">
     <HeaderShape hText="My skills" shape="blue_shape" />
     <SkillList />
   </article>
-  <article id="projekts"><h2>projekts</h2></article>
+
+  <article id="projekts">
+    <section class="projektCard">
+      <p class="tag">projekt</p>
+      <img src="https://placehold.co/600x400" alt="placeholder image" />
+      <h5>projkt</h5>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam doloremque
+        quam, cumque veritatis autem, nobis blanditiis natus, suscipit aliquid
+        sunt ipsam impedit ducimus quaerat voluptas accusamus ut aut quae.
+        Dolor.
+      </p>
+      <a href="https://jkjportfolie.netlify.app/">Mit første potfolie</a>
+    </section>
+    <section class="projektCard">
+      <p class="tag">projekt</p>
+      <img src="https://placehold.co/600x400" alt="placeholder image" />
+      <h5>projkt</h5>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam doloremque
+        quam, cumque veritatis autem, nobis blanditiis natus, suscipit aliquid
+        sunt ipsam impedit ducimus quaerat voluptas accusamus ut aut quae.
+        Dolor.
+      </p>
+      <a href="https://jkjportfolie.netlify.app/">Mit første potfolie</a>
+    </section>
+    <section class="projektCard">
+      <p class="tag">projekt</p>
+      <img src="https://placehold.co/600x400" alt="placeholder image" />
+      <h5>projkt</h5>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam doloremque
+        quam, cumque veritatis autem, nobis blanditiis natus, suscipit aliquid
+        sunt ipsam impedit ducimus quaerat voluptas accusamus ut aut quae.
+        Dolor.
+      </p>
+      <a href="https://jkjportfolie.netlify.app/">Mit første potfolie</a>
+    </section>
+    <section class="projektCard">
+      <p class="tag">projekt</p>
+      <img src="https://placehold.co/600x400" alt="placeholder image" />
+      <h5>projkt</h5>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam doloremque
+        quam, cumque veritatis autem, nobis blanditiis natus, suscipit aliquid
+        sunt ipsam impedit ducimus quaerat voluptas accusamus ut aut quae.
+        Dolor.
+      </p>
+      <a href="https://jkjportfolie.netlify.app/">Mit første potfolie</a>
+    </section>
+
+    <section class="projektCard">
+      <p class="tag">projekt</p>
+      <img src="https://placehold.co/600x400" alt="placeholder image" />
+      <section class="text_box">
+        <h5>projkt</h5>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam
+          doloremque quam, cumque veritatis autem, nobis blanditiis natus,
+          suscipit aliquid sunt ipsam impedit ducimus quaerat voluptas accusamus
+          ut aut quae. Dolor.
+        </p>
+        <a href="https://jkjportfolie.netlify.app/">Mit første potfolie</a>
+      </section>
+    </section>
+
+    <h2>projekts</h2>
+    <a href="https://jkjportfolie.netlify.app/">Mit første potfolie</a>
+    <a href="https://karruselbuild7.netlify.app/">Et projekt jeg er stolt af</a>
+  </article>
 </Layout>
 
 <style>
+  .tag {
+    background-color: var(--blue);
+    color: var(--beige);
+    padding-inline: var(--even-padding-s);
+
+    margin: 10px;
+    text-transform: uppercase;
+    align-self: flex-end;
+  }
+  #projekts {
+    & .projektCard {
+      display: flex;
+      flex-flow: column;
+      align-items: flex-start;
+
+      background-color: var(--white);
+
+      & .text_box {
+        padding: var(--even-padding-s);
+
+        & h5 {
+          text-align: center;
+          border-bottom: var(--blue) 2px solid;
+        }
+
+        a {
+          text-decoration: none;
+
+          background-color: var(--black);
+          color: var(--beige);
+          padding-inline: var(--even-padding-xs);
+
+          &:hover {
+            transition: 0.2s;
+            color: var(--black);
+            background-color: var(--white);
+            border-bottom: 2px solid var(--black);
+          }
+        }
+      }
+    }
+  }
+
   #skills {
     border-bottom: var(--black) 1px dashed;
     border-top: var(--black) 1px dashed;
@@ -53,10 +162,31 @@ import HeroText from "../components/HeroText.astro";
   #about {
     & .sectionShape {
       position: relative;
+
+      &::before {
+        z-index: -1;
+        content: "";
+        position: absolute;
+        right: -1rem;
+        bottom: -10rem;
+
+        background-image: url("../../public/img/yellow_form.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        aspect-ratio: 2/2;
+        width: 40%;
+        height: auto;
+        opacity: 90%;
+
+        animation: hover_kf 6s ease-in-out infinite;
+      }
+
       & * > :not(img) {
         z-index: 1;
       }
-      & img {
+
+      /* & img {
         position: absolute;
         bottom: -40%;
         right: 10%;
@@ -64,7 +194,7 @@ import HeroText from "../components/HeroText.astro";
         height: auto;
         z-index: -1;
         opacity: 90%;
-      }
+      } */
     }
     em {
       color: var(--orange);
