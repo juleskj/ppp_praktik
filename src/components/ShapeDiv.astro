@@ -1,0 +1,41 @@
+---
+const { shape } = Astro.props;
+---
+
+<section class={"sectionShape" + " " + shape}>
+  <slot />
+</section>
+
+<style>
+  .sectionShape {
+    position: relative;
+
+    &::before {
+      z-index: -1;
+      content: "";
+      position: absolute;
+      right: -1rem;
+      bottom: -10rem;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      aspect-ratio: 2/2;
+      width: 40%;
+      height: auto;
+      opacity: 90%;
+
+      animation: hover_kf 6s ease-in-out infinite;
+    }
+  }
+
+  .yellow::before {
+    background-image: url("../../public/img/yellow_form.svg");
+  }
+  .orange::before {
+    background-image: url("../../public/img/orange_form.svg");
+  }
+
+  .blue::before {
+    background-image: url("../../public/img/blue_form.svg");
+  }
+</style>

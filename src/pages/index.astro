@@ -5,12 +5,13 @@ import HeaderShape from "../components/HeaderShape.astro";
 import HeroText from "../components/HeroText.astro";
 import ProjektCard from "../components/ProjektCard.astro";
 import CardLayout from "../layouts/CardLayout.astro";
+import ShapeDiv from "../components/ShapeDiv.astro";
 ---
 
 <Layout title="Forside">
   <HeroText />
   <article id="about">
-    <section class="sectionShape">
+    <ShapeDiv shape="yellow">
       <HeaderShape hText="hej! mit navn er Jules" shape="orange_shape" />
       <h3>jeg er en <em> MMD front-end udvilker </em> under uddanelse</h3>
       <p>
@@ -23,7 +24,7 @@ import CardLayout from "../layouts/CardLayout.astro";
         Under min uddannelse har jeg udviklet omkring 10 hjemmesider, og jeg ser
         frem til at bygge endnu flere i fremtiden.
       </p>
-    </section>
+    </ShapeDiv>
   </article>
 
   <article id="task">
@@ -44,59 +45,62 @@ import CardLayout from "../layouts/CardLayout.astro";
   Astro.props; -->
 
   <div id="projekts">
-    <section class="text_box">
-      <h2>Mine projekter</h2>
-      <p>
-        Her er nogle af de projekter, jeg selv har udviklet eller været en del
-        af i et team, som jeg er mest stolt af. I disse projekter har jeg
-        anvendt forskellige værktøjer og viden for at løse opgaverne.
-      </p>
-    </section>
-    <CardLayout>
-      <ProjektCard
-        tag_text="js & css"
-        img_url="https://placehold.co/600x400"
-        card_header="første portfolie"
-        card_text="Lorem ipsum dolor sit amet, consectenaam, quial. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in id est laborum."
-        card_link="https://jkjportfolie.netlify.app/"
-        link_text="Se website på netlify"
-      />
+    <ShapeDiv shape="blue">
+      <section class="text_box">
+        <h2>Mine projekter</h2>
+        <p>
+          Her er nogle af de projekter, jeg selv har udviklet eller været en del
+          af i et team, som jeg er mest stolt af. I disse projekter har jeg
+          anvendt forskellige værktøjer og viden for at løse opgaverne.
+        </p>
+      </section>
 
-      <ProjektCard
-        tag_text="værktøj & framework"
-        img_url="https://placehold.co/600x400"
-        card_header="Karrusel case"
-        card_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed datat non proident, sunt in culpa qui officia "
-        card_link="https://karruselbuild7.netlify.app/"
-        link_text="Se website på netlify"
-      />
+      <CardLayout>
+        <ProjektCard
+          tag_text="js & css"
+          img_url="https://placehold.co/600x400"
+          card_header="første portfolie"
+          card_text="Lorem ipsum dolor sit amet, consectenaam, quial. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in id est laborum."
+          card_link="https://jkjportfolie.netlify.app/"
+          link_text="Se website på netlify"
+        />
 
-      <ProjektCard
-        tag_text="ux & værktøj"
-        img_url="https://placehold.co/600x400"
-        card_header="i tåd med verden case"
-        card_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-        card_link="https://itmv007.netlify.app/"
-        link_text="Se website på netlify"
-      />
-      <ProjektCard
-        tag_text="ux/ui & framework"
-        img_url="https://placehold.co/600x400"
-        card_header="K2 redesign case"
-        card_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-        card_link="https://k2gruppe12.netlify.app/"
-        link_text="Se website på netlify"
-      />
+        <ProjektCard
+          tag_text="værktøj & framework"
+          img_url="https://placehold.co/600x400"
+          card_header="Karrusel case"
+          card_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed datat non proident, sunt in culpa qui officia "
+          card_link="https://karruselbuild7.netlify.app/"
+          link_text="Se website på netlify"
+        />
 
-      <ProjektCard
-        tag_text="værktøj & framework"
-        img_url="https://placehold.co/600x400"
-        card_header="Eget spil"
-        card_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-        card_link="https://mars-muncher.netlify.app/"
-        link_text="Se website på netlify"
-      />
-    </CardLayout>
+        <ProjektCard
+          tag_text="ux & værktøj"
+          img_url="https://placehold.co/600x400"
+          card_header="i tåd med verden case"
+          card_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+          card_link="https://itmv007.netlify.app/"
+          link_text="Se website på netlify"
+        />
+        <ProjektCard
+          tag_text="ux/ui & framework"
+          img_url="https://placehold.co/600x400"
+          card_header="K2 redesign case"
+          card_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+          card_link="https://k2gruppe12.netlify.app/"
+          link_text="Se website på netlify"
+        />
+
+        <ProjektCard
+          tag_text="værktøj & framework"
+          img_url="https://placehold.co/600x400"
+          card_header="Eget spil"
+          card_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+          card_link="https://mars-muncher.netlify.app/"
+          link_text="Se website på netlify"
+        />
+      </CardLayout>
+    </ShapeDiv>
   </div>
 </Layout>
 
@@ -115,43 +119,8 @@ import CardLayout from "../layouts/CardLayout.astro";
   }
 
   #about {
-    & .sectionShape {
-      position: relative;
-
-      &::before {
-        z-index: -1;
-        content: "";
-        position: absolute;
-        right: -1rem;
-        bottom: -10rem;
-
-        background-image: url("../../public/img/yellow_form.svg");
-        background-repeat: no-repeat;
-        background-size: contain;
-
-        aspect-ratio: 2/2;
-        width: 40%;
-        height: auto;
-        opacity: 90%;
-
-        animation: hover_kf 6s ease-in-out infinite;
-      }
-
-      & * > :not(img) {
-        z-index: 1;
-      }
-
-      /* & img {
-        position: absolute;
-        bottom: -40%;
-        right: 10%;
-        width: 40%;
-        height: auto;
-        z-index: -1;
-        opacity: 90%;
-      } */
-    }
   }
+
   em {
     color: var(--orange);
   }
