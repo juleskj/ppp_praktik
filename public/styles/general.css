@@ -31,6 +31,7 @@
   --fluid-h4: clamp(1.5625rem, 1.3451rem + 1.087vw, 2.1875rem);
   --fluid-h5: clamp(1.4375rem, 1.2853rem + 0.7609vw, 1.875rem);
   --fluid-h6: clamp(1.25rem, 1.1413rem + 0.5435vw, 1.5625rem);
+  --fluid-p: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
 }
 
 h1,
@@ -84,9 +85,9 @@ ul,
 ol {
   font-family: "Anaheim", sans-serif;
   color: var(--black);
-  font-size: 16px;
+  font-size: var(--fluid-p);
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   --flow-space: 0.5em;
 }
 
