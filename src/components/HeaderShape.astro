@@ -22,7 +22,7 @@ const { hText, shape } = Astro.props;
     display: inline-block;
     background-repeat: no-repeat;
     background-size: contain;
-    margin-right: -50px;
+    margin-right: calc(var(--shape-width) * -0.5);
   }
 
   .blue_shape::before {
