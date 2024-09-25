@@ -27,13 +27,8 @@ import CardLayout from "../layouts/CardLayout.astro";
   </article>
 
   <article id="task">
-    <h2>task</h2>
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque
-      neque, architecto beatae, placeat libero laboriosam veritatis atque
-      dignissimos praesentium, nulla cumque doloribus tenetur accusamus
-      reiciendis iusto velit quas et hic?
-    </p>
+    <h2>opgave under praktik</h2>
+    <h3>hvad du kan<em> forvente </em>af mig mens jeg er i praktik hos jer</h3>
   </article>
 
   <article id="skills" class="full-bleed">
@@ -45,7 +40,14 @@ import CardLayout from "../layouts/CardLayout.astro";
   Astro.props; -->
 
   <div id="projekts">
-    <h2>Projekts</h2>
+    <section class="text_box">
+      <h2>Projekts</h2>
+      <p>
+        her er nogle af de projekter jeg selv har laver eller været en del af
+        igennem et team som jeg er mest stolt. her har jeg skulle bruge
+        forskellige værtøjer og viden til at løse opgaven.
+      </p>
+    </section>
     <CardLayout>
       <ProjektCard
         tag_text="js & css"
@@ -97,6 +99,10 @@ import CardLayout from "../layouts/CardLayout.astro";
 <style>
   #projekts {
     padding: 100px 0;
+
+    & .text_box {
+      padding: var(--even-padding-l) 0;
+    }
   }
 
   #skills {
@@ -141,11 +147,10 @@ import CardLayout from "../layouts/CardLayout.astro";
         opacity: 90%;
       } */
     }
-    em {
-      color: var(--orange);
-    }
   }
-
+  em {
+    color: var(--orange);
+  }
   article {
     padding: 100px 0;
   }

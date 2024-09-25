@@ -1,22 +1,55 @@
 ---
-const { link_url, link_text } = Astro.props;
+const { link_url, link_text, size, variant } = Astro.props;
 ---
 
-<a href={link_url}>{link_text}</a>
+<a class={variant + " " + size} href={link_url}>{link_text}</a>
 
 <style>
   a {
     text-decoration: none;
+    text-align: center;
+  }
+
+  .xSmall {
+    padding-inline: var(--even-padding-xs);
+  }
+  .small {
+    padding-inline: var(--even-padding-s);
+  }
+  .medium {
+    padding-inline: var(--even-padding-m);
+  }
+
+  .blue_theme {
+    border-bottom: 2px solid var(--blue);
     background-color: var(--blue);
     color: var(--beige);
-    padding-inline: var(--even-padding-xs);
-    text-align: center;
-    border-bottom: 2px solid var(--black);
-
     &:hover {
       transition: 0.2s;
       color: var(--black);
       background-color: var(--white);
+    }
+  }
+
+  .black_theme {
+    border-bottom: 2px solid var(--black);
+    background-color: var(--black);
+    color: var(--beige);
+    &:hover {
+      transition: 0.2s;
+      color: var(--black);
+      background-color: var(--white);
+    }
+  }
+
+  .white_theme {
+    border-bottom: 2px solid var(--white);
+    background-color: var(--white);
+    color: var(--black);
+    &:hover {
+      transition: 0.2s;
+      color: var(--beige);
+      background-color: var(--black);
     }
   }
 </style>

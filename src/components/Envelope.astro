@@ -21,6 +21,30 @@
 </script>
 
 <style>
+  .contact_container {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    z-index: 9;
+  }
+
+  a {
+    display: block;
+    width: 80px;
+    height: 80px;
+    background-image: url("../../public/img/closed_envelope.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 25px;
+    z-index: 1;
+
+    &:hover,
+    &:active {
+      transition: 0.2s;
+      background-image: url("../../public/img/open_envolope.svg");
+    }
+  }
+
   @media (800px < width) {
     .contact_container {
       position: fixed;
@@ -49,25 +73,8 @@
           z-index: 0;
         }
       }
-
-      & a {
-        display: block;
-        width: 80px;
-        height: 80px;
-        background-image: url("../../public/img/closed_envelope.svg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin-bottom: 25px;
-        z-index: 1;
-
-        &:hover {
-          transition: 0.2s;
-          background-image: url("../../public/img/open_envolope.svg");
-        }
-      }
     }
   }
-
   .disappear {
     animation: disappear_kf 1s ease-out 1;
     animation-fill-mode: both;
