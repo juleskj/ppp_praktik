@@ -1,0 +1,67 @@
+---
+const { tag_text, img_url, card_header, card_text, card_link, link_text } =
+  Astro.props;
+
+import Link from "./Link.astro";
+---
+
+<div class="projektCard">
+  <p class="tag">{tag_text}</p>
+  <img src={img_url} alt="placeholder image" />
+  <section class="text_box">
+    <div class="box">
+      <h5>{card_header}</h5>
+      <p>
+        {card_text}
+      </p>
+    </div>
+    <Link link_text={link_text} link_url={card_link} />
+  </section>
+</div>
+<style>
+  .box {
+    display: grid;
+    grid-template-rows: minmax(50px, 100px) auto;
+  }
+
+  .projektCard {
+    display: flex;
+    flex-flow: column;
+    flex: 1 1 250px;
+
+    background-color: var(--white);
+
+    & .text_box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      height: 100%;
+      padding: var(--even-padding-s);
+
+      & h5 {
+        text-align: center;
+        border-bottom: var(--blue) 2px solid;
+      }
+    }
+
+    & img {
+      height: auto;
+      width: 100%;
+      aspect-ratio: 2/1;
+      object-fit: cover;
+    }
+  }
+
+  .tag {
+    background-color: var(--black);
+    color: var(--beige);
+
+    padding-inline: var(--even-padding-s);
+    margin: 10px;
+
+    text-transform: uppercase;
+
+    align-self: flex-end;
+  }
+</style>

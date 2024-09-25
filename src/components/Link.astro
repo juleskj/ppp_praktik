@@ -1,0 +1,22 @@
+---
+const { link_url, link_text } = Astro.props;
+---
+
+<a href={link_url}>{link_text}</a>
+
+<style>
+  a {
+    text-decoration: none;
+    background-color: var(--blue);
+    color: var(--beige);
+    padding-inline: var(--even-padding-xs);
+    text-align: center;
+    border-bottom: 2px solid var(--black);
+
+    &:hover {
+      transition: 0.2s;
+      color: var(--black);
+      background-color: var(--white);
+    }
+  }
+</style>
