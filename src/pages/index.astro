@@ -11,7 +11,7 @@ import ShapeDiv from "../components/ShapeDiv.astro";
 <Layout title="Forside">
   <HeroText />
   <article id="about">
-    <ShapeDiv shape="yellow">
+    <ShapeDiv shape="yellow" duration="duration4s">
       <HeaderShape hText="hej! mit navn er Jules" shape="orange_shape" />
       <h3>jeg er en <em> MMD front-end udvilker </em> under uddanelse</h3>
       <p>
@@ -27,17 +27,9 @@ import ShapeDiv from "../components/ShapeDiv.astro";
     </ShapeDiv>
   </article>
 
-  <article id="task">
-    <h2>opgave under praktik</h2>
-    <h3>her er nogle af mine <em> earfaringer</em></h3>
-    <p>
-      jeg har kan arbejde med et framework og lave componenter. jeg har arbejdet
-      mest i astro, men har også arbejde en smule med react.
-    </p>
-  </article>
-
   <article id="skills" class="full-bleed">
     <HeaderShape hText="My skills" shape="blue_shape" />
+    <p>lille tekst om i hvilke relation point scalaen er til</p>
     <SkillList />
   </article>
 
@@ -45,63 +37,71 @@ import ShapeDiv from "../components/ShapeDiv.astro";
   Astro.props; -->
 
   <div id="projekts">
-    <ShapeDiv shape="blue">
-      <section class="text_box">
-        <h2>Mine projekter</h2>
-        <p>
-          Her er nogle af de projekter, jeg selv har udviklet eller været en del
-          af i et team, som jeg er mest stolt af. I disse projekter har jeg
-          anvendt forskellige værktøjer og viden for at løse opgaverne.
-        </p>
-      </section>
+    <section class="text_box">
+      <h2>Mine projekter</h2>
+      <p>
+        Her er nogle af de projekter, jeg selv har udviklet eller været en del
+        af i et team, som jeg er mest stolt af. I disse projekter har jeg
+        anvendt forskellige værktøjer og viden for at løse opgaverne.
+      </p>
+    </section>
 
-      <CardLayout>
-        <ProjektCard
-          tag_text="js & css"
-          img_url="https://placehold.co/600x400"
-          card_header="første portfolie"
-          card_text="Lorem ipsum dolor sit amet, consectenaam, quial. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in id est laborum."
-          card_link="https://jkjportfolie.netlify.app/"
-          link_text="Se website på netlify"
-        />
+    <CardLayout>
+      <ProjektCard
+        tag_text="js & css"
+        img_url="https://placehold.co/600x400"
+        card_header="første portfolie"
+        card_text="Lorem ipsum dolor sit amet, consectenaam, quial. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in id est laborum."
+        card_link="https://jkjportfolie.netlify.app/"
+        link_text="Se website på netlify"
+      />
 
-        <ProjektCard
-          tag_text="værktøj & framework"
-          img_url="https://placehold.co/600x400"
-          card_header="Karrusel case"
-          card_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed datat non proident, sunt in culpa qui officia "
-          card_link="https://karruselbuild7.netlify.app/"
-          link_text="Se website på netlify"
-        />
+      <ProjektCard
+        tag_text="værktøj & framework"
+        img_url="https://placehold.co/600x400"
+        card_header="Karrusel case"
+        card_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed datat non proident, sunt in culpa qui officia "
+        card_link="https://karruselbuild7.netlify.app/"
+        link_text="Se website på netlify"
+      />
 
-        <ProjektCard
-          tag_text="ux & værktøj"
-          img_url="https://placehold.co/600x400"
-          card_header="i tåd med verden case"
-          card_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-          card_link="https://itmv007.netlify.app/"
-          link_text="Se website på netlify"
-        />
-        <ProjektCard
-          tag_text="ux/ui & framework"
-          img_url="https://placehold.co/600x400"
-          card_header="K2 redesign case"
-          card_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-          card_link="https://k2gruppe12.netlify.app/"
-          link_text="Se website på netlify"
-        />
+      <ProjektCard
+        tag_text="ux & værktøj"
+        img_url="https://placehold.co/600x400"
+        card_header="i tåd med verden case"
+        card_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+        card_link="https://itmv007.netlify.app/"
+        link_text="Se website på netlify"
+      />
+      <ProjektCard
+        tag_text="ux/ui & framework"
+        img_url="https://placehold.co/600x400"
+        card_header="K2 redesign case"
+        card_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+        card_link="https://k2gruppe12.netlify.app/"
+        link_text="Se website på netlify"
+      />
 
-        <ProjektCard
-          tag_text="værktøj & framework"
-          img_url="https://placehold.co/600x400"
-          card_header="Eget spil"
-          card_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-          card_link="https://mars-muncher.netlify.app/"
-          link_text="Se website på netlify"
-        />
-      </CardLayout>
-    </ShapeDiv>
+      <ProjektCard
+        tag_text="værktøj & framework"
+        img_url="https://placehold.co/600x400"
+        card_header="Eget spil"
+        card_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+        card_link="https://mars-muncher.netlify.app/"
+        link_text="Se website på netlify"
+      />
+    </CardLayout>
   </div>
+  <article id="task">
+    <ShapeDiv shape="orange" duration="duration8s">
+      <h2>opgave under praktik</h2>
+      <h3>her er nogle af mine <em> earfaringer</em></h3>
+      <p>
+        jeg har kan arbejde med et framework og lave componenter. jeg har
+        arbejdet mest i astro, men har også arbejde en smule med react.
+      </p>
+    </ShapeDiv>
+  </article>
 </Layout>
 
 <style>
@@ -114,8 +114,8 @@ import ShapeDiv from "../components/ShapeDiv.astro";
   }
 
   #skills {
-    border-bottom: var(--black) 1px dashed;
-    border-top: var(--black) 1px dashed;
+    /* border-bottom: var(--black) 1px dashed;
+    border-top: var(--black) 1px dashed; */
   }
 
   #about {

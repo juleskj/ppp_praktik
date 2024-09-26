@@ -1,5 +1,5 @@
 ---
-
+import ShapeDiv from "./ShapeDiv.astro";
 ---
 
 <script>
@@ -16,7 +16,7 @@
 </script>
 
 <article class="full-bleed hero">
-  <div class="img_container">
+  <div>
     <img class="imgMe" src="../../public/img/sitting_pose.png" alt="" />
 
     <h1>jules K. Jensen</h1>
@@ -28,10 +28,22 @@
     .imgMe {
       display: none;
     }
+
+    .hero {
+      min-height: 0vh;
+    }
   }
 
   .hero {
+    min-height: 90vh;
     background-color: var(--yellow);
+    z-index: -2;
+
+    & div {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+    }
 
     & .img_container {
       display: flex;

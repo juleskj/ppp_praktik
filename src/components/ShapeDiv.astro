@@ -1,8 +1,8 @@
 ---
-const { shape } = Astro.props;
+const { shape, duration } = Astro.props;
 ---
 
-<section class={"sectionShape" + " " + shape}>
+<section class={"sectionShape" + " " + shape + " " + duration}>
   <slot />
 </section>
 
@@ -24,7 +24,7 @@ const { shape } = Astro.props;
       height: auto;
       opacity: 90%;
 
-      animation: hover_kf 6s ease-in-out infinite;
+      animation: hover_kf ease-in-out infinite;
     }
   }
 
@@ -37,5 +37,15 @@ const { shape } = Astro.props;
 
   .blue::before {
     background-image: url("../../public/img/blue_form.svg");
+  }
+
+  .duration4s::before {
+    animation-duration: 4s;
+  }
+  .duration6s::before {
+    animation-duration: 6s;
+  }
+  .duration8s::before {
+    animation-duration: 8s;
   }
 </style>
