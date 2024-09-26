@@ -12,7 +12,7 @@ import Link from "../components/Link.astro";
 <Layout title="Forside">
   <HeroText hero_text="Julie K. Jensen" />
   <article id="about">
-    <ShapeDiv shape="yellow" duration="duration4s">
+    <ShapeDiv shape="yellow" duration="duration4s" position="bottom_right">
       <HeaderShape hText="Hej! mit navn er Julie" shape="orange_shape" />
       <h3>jeg er en <em> MMD front-end udvilker </em> under uddanelse</h3>
       <p>
@@ -27,21 +27,20 @@ import Link from "../components/Link.astro";
       </p>
     </ShapeDiv>
   </article>
+
   <article id="skills" class="full-bleed">
     <HeaderShape hText="My skills" shape="blue_shape" />
     <p>
       Her er de færdigheder, jeg har udviklet gennem min tid på KEA, hvor jeg
-      har været med til at udvikle 10 hjemmesider.
+      har været med til at udvikle 10+ hjemmesider.
     </p>
     <SkillList />
   </article>
 
-  <!-- const { tag_text, img_url, card_header, card_text, card_link, link_text } =
-  Astro.props; -->
-
   <div id="projekts" class="full-bleed">
     <section class="text_box">
-      <h2>Mine projekter</h2>
+      <HeaderShape hText="Mine projekter" shape="yellow_shape" />
+
       <p>
         Her er nogle af de projekter, jeg selv har udviklet eller været en del
         af i et team, som jeg er mest stolt af. I disse projekter har jeg
@@ -105,9 +104,10 @@ import Link from "../components/Link.astro";
       />
     </CardLayout>
   </div>
+
   <article id="task">
-    <ShapeDiv shape="orange" duration="duration8s">
-      <h2>opgave under praktik</h2>
+    <ShapeDiv shape="yellow_moon" duration="duration8s" position="top_right">
+      <HeaderShape hText="opgave under praktik" shape="orange_moon" />
       <h3>her er lidt af <em>hvad jeg kan</em> og har arbejdet med</h3>
       <p>
         Jeg har arbejdet med frameworks som Astro til at udvikle komponenter.
@@ -123,17 +123,10 @@ import Link from "../components/Link.astro";
 <style>
   #projekts {
     padding: 100px 0;
-    border-bottom: dashed 2px var(--black);
-    border-top: dashed 2px var(--black);
 
     & .text_box {
       padding: var(--even-padding-l) 0;
     }
-  }
-
-  #skills {
-    /* border-bottom: var(--black) 1px dashed;
-    border-top: var(--black) 1px dashed; */
   }
 
   article {

@@ -21,7 +21,7 @@ import Link from "../Link.astro";
   });
 </script>
 
-<header class="full-bleed">
+<header class="full-bleed none">
   <nav>
     <ul>
       <li>
@@ -60,6 +60,12 @@ import Link from "../Link.astro";
   </nav>
 
   <style>
+    @media (width < 800px) {
+      .none {
+        display: none;
+      }
+    }
+
     header {
       background-color: var(--yellow);
       position: sticky;

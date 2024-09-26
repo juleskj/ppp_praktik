@@ -1,8 +1,8 @@
 ---
-const { shape, duration } = Astro.props;
+const { shape, duration, position } = Astro.props;
 ---
 
-<section class={"sectionShape" + " " + shape + " " + duration}>
+<section class={"sectionShape" + " " + shape + " " + duration + " " + position}>
   <slot />
 </section>
 
@@ -14,8 +14,7 @@ const { shape, duration } = Astro.props;
       z-index: -1;
       content: "";
       position: absolute;
-      right: -1rem;
-      bottom: -10rem;
+
       background-repeat: no-repeat;
       background-size: contain;
 
@@ -27,7 +26,7 @@ const { shape, duration } = Astro.props;
       animation: hover_kf ease-in-out infinite;
     }
   }
-
+  /* diffrent kinds of shaps */
   .yellow::before {
     background-image: url("/img/yellow_form.svg");
   }
@@ -39,6 +38,14 @@ const { shape, duration } = Astro.props;
     background-image: url("/img/blue_form.svg");
   }
 
+  .orange_moon::before {
+    background-image: url("/img/orangeMoon.svg");
+  }
+  .yellow_moon::before {
+    background-image: url("/img/yellowMoon.svg");
+  }
+
+  /* speed of the shape hovering */
   .duration4s::before {
     animation-duration: 4s;
   }
@@ -47,5 +54,24 @@ const { shape, duration } = Astro.props;
   }
   .duration8s::before {
     animation-duration: 8s;
+  }
+
+  /* shape placement */
+
+  .top_left::before {
+    left: -1rem;
+    top: -10rem;
+  }
+  .top_right::before {
+    right: -1rem;
+    top: -10rem;
+  }
+  .bottom_left::before {
+    left: -1rem;
+    bottom: -10rem;
+  }
+  .bottom_right::before {
+    right: -1rem;
+    bottom: -10rem;
   }
 </style>
