@@ -23,16 +23,20 @@ const { hText, shape } = Astro.props;
     background-repeat: no-repeat;
     background-size: contain;
     margin-right: calc(var(--shape-width) * -0.5);
+    min-width: var(--shape-width);
+    min-height: var(--shape-width);
   }
 
   .blue_shape::before {
     background-image: url("/img/blue_form.svg");
-    min-width: var(--shape-width);
-    min-height: var(--shape-width);
   }
   .orange_shape::before {
     background-image: url("/img/orange_form.svg");
-    min-width: var(--shape-width);
-    min-height: var(--shape-width);
+  }
+  .yellow_moon::before {
+    background-image: url("/img/yellowMoon.svg");
+  }
+  .orange_moon::before {
+    background-image: url("/img/orangeMoon.svg");
   }
 </style>

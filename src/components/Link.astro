@@ -32,7 +32,7 @@ const { link_url, link_text, size, variant, target } = Astro.props;
   }
 
   .black_theme {
-    border-bottom: 2px solid var(--black);
+    border-bottom: 2px solid var(--white);
     background-color: var(--black);
     color: var(--beige);
     &:hover {
@@ -43,8 +43,18 @@ const { link_url, link_text, size, variant, target } = Astro.props;
   }
 
   .white_theme {
-    border-bottom: 2px solid var(--white);
+    border-bottom: 2px solid var(--black);
     background-color: var(--white);
+    color: var(--black);
+    &:hover {
+      transition: 0.2s;
+      color: var(--beige);
+      background-color: var(--black);
+    }
+  }
+
+  .transparent_theme {
+    border-bottom: 2px solid var(--black);
     color: var(--black);
     &:hover {
       transition: 0.2s;

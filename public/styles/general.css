@@ -122,6 +122,10 @@ h6 {
   --flow-space: 0.5rlh;
 }
 
+em {
+  color: var(--orange);
+}
+
 button {
   --flow-space: 0.5rlh;
 }

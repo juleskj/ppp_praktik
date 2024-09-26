@@ -1,5 +1,6 @@
 ---
 import ShapeDiv from "./ShapeDiv.astro";
+const { hero_text } = Astro.props;
 ---
 
 <script>
@@ -9,17 +10,20 @@ import ShapeDiv from "./ShapeDiv.astro";
   function randNumber() {
     let rand = Math.ceil(Math.random() * max);
     rand = rand + "%";
-    console.log("load");
-    console.log(rand);
+
     document.querySelector(".imgMe").style.marginLeft = `${rand}`;
   }
 </script>
 
 <article class="full-bleed hero">
   <div>
-    <img class="imgMe" src="/img/sitting_pose.png" alt="" />
+    <img
+      class="imgMe"
+      src="/img/sitting_pose.png"
+      alt="billede af person som sidder på tekst"
+    />
 
-    <h1>jules K. Jensen</h1>
+    <h1>{hero_text}</h1>
   </div>
 </article>
 

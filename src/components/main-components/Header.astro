@@ -1,5 +1,5 @@
 ---
-
+import Link from "../Link.astro";
 ---
 
 <script>
@@ -24,53 +24,81 @@
 <header class="full-bleed">
   <nav>
     <ul>
-      <li><a href="/#about">About</a></li>
-      <li><a href="/#task">task</a></li>
-      <li><a href="/#skills">Skills</a></li>
-      <li><a href="/#projekts">Projekt</a></li>
+      <li>
+        <Link
+          link_text="About Me"
+          link_url="/#about"
+          size="medium"
+          variant="transparent_theme"
+        />
+      </li>
+      <li>
+        <Link
+          link_text="Erfaring"
+          link_url="/#task"
+          size="medium"
+          variant="transparent_theme"
+        />
+      </li>
+      <li>
+        <Link
+          link_text="Skills"
+          link_url="/#skills"
+          size="medium"
+          variant="transparent_theme"
+        />
+      </li>
+      <li>
+        <Link
+          link_text="Projekter"
+          link_url="/#projekts"
+          size="medium"
+          variant="transparent_theme"
+        />
+      </li>
     </ul>
   </nav>
+
+  <style>
+    header {
+      background-color: var(--yellow);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav {
+      padding: var(--small-padding);
+      margin: 10px;
+    }
+    li {
+      display: contents;
+      list-style-type: none;
+    }
+
+    ul {
+      display: flex;
+      flex-flow: wrap row;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    a {
+      padding: var(--small-padding);
+      border-bottom: var(--black) 2px solid;
+      text-decoration: none;
+      color: var(--black);
+      flex: 1 1 100px;
+      text-align: center;
+      &:hover {
+        transition: 0.2s;
+        background-color: var(--black);
+        color: var(--beige);
+      }
+
+      &::first-letter {
+        text-transform: capitalize;
+      }
+    }
+  </style>
 </header>
-
-<style>
-  header {
-    background-color: var(--yellow);
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
-  nav {
-    padding: var(--small-padding);
-    margin: 10px;
-  }
-  li {
-    display: contents;
-    list-style-type: none;
-  }
-
-  ul {
-    display: flex;
-    flex-flow: wrap row;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  a {
-    padding: var(--small-padding);
-    border-bottom: var(--black) 2px solid;
-    text-decoration: none;
-    color: var(--black);
-    flex: 1 1 100px;
-    text-align: center;
-    &:hover {
-      transition: 0.2s;
-      background-color: var(--black);
-      color: var(--beige);
-    }
-
-    &::first-letter {
-      text-transform: capitalize;
-    }
-  }
-</style>

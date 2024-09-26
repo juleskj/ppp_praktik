@@ -6,13 +6,14 @@ import HeroText from "../components/HeroText.astro";
 import ProjektCard from "../components/ProjektCard.astro";
 import CardLayout from "../layouts/CardLayout.astro";
 import ShapeDiv from "../components/ShapeDiv.astro";
+import Link from "../components/Link.astro";
 ---
 
 <Layout title="Forside">
-  <HeroText />
+  <HeroText hero_text="Julie K. Jensen" />
   <article id="about">
     <ShapeDiv shape="yellow" duration="duration4s">
-      <HeaderShape hText="hej! mit navn er Jules" shape="orange_shape" />
+      <HeaderShape hText="Hej! mit navn er Julie" shape="orange_shape" />
       <h3>jeg er en <em> MMD front-end udvilker </em> under uddanelse</h3>
       <p>
         Som kreativ frontend-udvikler fokuserer jeg på at skabe fleksibel,
@@ -26,17 +27,19 @@ import ShapeDiv from "../components/ShapeDiv.astro";
       </p>
     </ShapeDiv>
   </article>
-
   <article id="skills" class="full-bleed">
     <HeaderShape hText="My skills" shape="blue_shape" />
-    <p>lille tekst om i hvilke relation point scalaen er til</p>
+    <p>
+      Her er de færdigheder, jeg har udviklet gennem min tid på KEA, hvor jeg
+      har været med til at udvikle 10 hjemmesider.
+    </p>
     <SkillList />
   </article>
 
   <!-- const { tag_text, img_url, card_header, card_text, card_link, link_text } =
   Astro.props; -->
 
-  <div id="projekts">
+  <div id="projekts" class="full-bleed">
     <section class="text_box">
       <h2>Mine projekter</h2>
       <p>
@@ -105,10 +108,13 @@ import ShapeDiv from "../components/ShapeDiv.astro";
   <article id="task">
     <ShapeDiv shape="orange" duration="duration8s">
       <h2>opgave under praktik</h2>
-      <h3>her er nogle af hvad jeg har <em> kenskab til</em></h3>
+      <h3>her er lidt af <em>hvad jeg kan</em> og har arbejdet med</h3>
       <p>
-        jeg har kan arbejde med et framework og lave componenter. jeg har
-        arbejdet mest i astro, men har også arbejde en smule med react.
+        Jeg har arbejdet med frameworks som Astro til at udvikle komponenter.
+        Her har jeg skabt kode-snippets, der kan genbruges på tværs af projekter
+        og tilpasses i flere varianter af samme komponent. Jeg har en solid
+        forståelse af JavaScript, CSS og HTML og er meget ivrig efter at lære
+        mere. Derudover har jeg et stærkt kendskab til både grid og flexbox.
       </p>
     </ShapeDiv>
   </article>
@@ -117,6 +123,8 @@ import ShapeDiv from "../components/ShapeDiv.astro";
 <style>
   #projekts {
     padding: 100px 0;
+    border-bottom: dashed 2px var(--black);
+    border-top: dashed 2px var(--black);
 
     & .text_box {
       padding: var(--even-padding-l) 0;
@@ -128,12 +136,6 @@ import ShapeDiv from "../components/ShapeDiv.astro";
     border-top: var(--black) 1px dashed; */
   }
 
-  #about {
-  }
-
-  em {
-    color: var(--orange);
-  }
   article {
     padding: 100px 0;
   }

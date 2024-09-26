@@ -1,27 +1,75 @@
 ---
-
+import Link from "../Link.astro";
 ---
 
 <footer class="full-bleed" id="footer">
   <nav>
     <ul>
       <li>
-        <a href="https://www.linkedin.com/in/julie-kristina-jensen-7430502a2/"
-          >Linkedin</a
-        >
+        <Link
+          link_text="LinkedIn"
+          link_url="https://www.linkedin.com/in/julie-kristina-jensen-7430502a2/"
+          size="medium"
+          variant="black_theme"
+          target="_blank"
+        />
       </li>
-      <li><a href="https://github.com/juleskj">Github</a></li>
-      <li><a href="https://codepen.io/Juliekj">Codepen</a></li>
-      <li><a href="mailto:juje0003@stud.kea.dk">email</a></li>
+      <li>
+        <Link
+          link_text="Kea-mail"
+          link_url="mailto:juje0003@stud.kea.dk"
+          size="medium"
+          variant="black_theme"
+          target="_blank"
+        />
+      </li>
+      <li>
+        <Link
+          link_text="Gmail"
+          link_url="mailto:juljen2730@gmail.com"
+          size="medium"
+          variant="black_theme"
+          target="_blank"
+        />
+      </li>
+      <li>
+        <Link
+          link_text="GitHub"
+          link_url="https://github.com/juleskj"
+          size="medium"
+          variant="black_theme"
+          target="_blank"
+        />
+      </li>
+      <li>
+        <Link
+          link_text="Codepen"
+          link_url="https://codepen.io/Juliekj"
+          size="medium"
+          variant="black_theme"
+          target="_blank"
+        />
+      </li>
     </ul>
+    <h6>made by JKJ || TLF: +45 20204206</h6>
   </nav>
 </footer>
 
 <style>
+  h6 {
+    color: var(--beige);
+  }
   footer {
     margin: 100px 0 0 0;
     padding: var(--even-padding-l);
     background-color: var(--black);
+    & nav {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      align-items: center;
+      justify-items: center;
+      gap: 2rem;
+    }
 
     & ul {
       display: flex;
