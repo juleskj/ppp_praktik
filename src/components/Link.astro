@@ -1,8 +1,8 @@
 ---
-const { link_url, link_text, size, variant } = Astro.props;
+const { link_url, link_text, size, variant, target } = Astro.props;
 ---
 
-<a class={variant + " " + size} href={link_url}>{link_text}</a>
+<a class={variant + " " + size} href={link_url} target={target}>{link_text}</a>
 
 <style>
   a {

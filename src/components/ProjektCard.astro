@@ -1,13 +1,21 @@
 ---
-const { tag_text, img_url, card_header, card_text, card_link, link_text } =
-  Astro.props;
+const {
+  tag_text,
+  img_url,
+  card_header,
+  card_text,
+  card_link,
+  link_text,
+  target,
+  img_alt,
+} = Astro.props;
 
 import Link from "./Link.astro";
 ---
 
 <div class="projektCard">
   <p class="tag">{tag_text}</p>
-  <img src={img_url} alt="placeholder image" />
+  <img src={img_url} alt={img_alt} />
   <section class="text_box">
     <div class="box">
       <h5>{card_header}</h5>
@@ -18,6 +26,7 @@ import Link from "./Link.astro";
     <Link
       link_text={link_text}
       link_url={card_link}
+      target={target}
       variant="blue_theme"
       size="xSmall"
     />

@@ -178,13 +178,3 @@ button {
     transform: translateY(10px);
   }
 }
-
-.duration4s {
-  animation-duration: 4s;
-}
-.delay6s {
-  animation-duration: 6s;
-}
-.delay8s {
-  animation-duration: 8s;
-}

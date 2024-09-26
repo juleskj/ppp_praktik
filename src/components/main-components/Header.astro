@@ -3,15 +3,21 @@
 ---
 
 <script>
+  let isScrolling;
   const header = document.querySelector("header");
-  document.addEventListener("scroll", function () {
-    console.log("der scrolles");
 
-    if (scrollY > 10) {
-      header.style.backgroundColor = "white";
-    } else {
-      header.style.backgroundColor = "var(--yellow)";
-    }
+  document.addEventListener("scroll", function () {
+    window.clearTimeout(isScrolling);
+
+    isScrolling = setTimeout(function () {
+      if (scrollY > 10) {
+        console.log("you are at the bottom");
+
+        header.style.backgroundColor = "white";
+      } else {
+        header.style.backgroundColor = "var(--yellow)";
+      }
+    }, 100);
   });
 </script>
 
