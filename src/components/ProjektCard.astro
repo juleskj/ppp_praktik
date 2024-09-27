@@ -15,7 +15,8 @@ import Link from "./Link.astro";
 
 <div class="projektCard">
   <p class="tag">{tag_text}</p>
-  <img src={img_url} alt={img_alt} />
+  <a href={card_link} target={target}> <img src={img_url} alt={img_alt} /></a>
+
   <section class="text_box">
     <div class="box">
       <h5>{card_header}</h5>
@@ -32,7 +33,11 @@ import Link from "./Link.astro";
     />
   </section>
 </div>
+
 <style>
+  a {
+    display: contents;
+  }
   .box {
     display: grid;
     grid-template-rows: minmax(50px, 100px) auto;
