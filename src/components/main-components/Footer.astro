@@ -65,18 +65,22 @@ import Link from "../Link.astro";
     background-color: var(--black);
     & nav {
       display: grid;
-      grid-template-rows: 1fr 1fr;
-      align-items: center;
-      justify-items: center;
+      grid-template-rows: 1fr auto;
       gap: 2rem;
     }
 
+    & p {
+      justify-self: center;
+    }
+
     & ul {
-      display: flex;
-      flex-flow: row wrap;
-      align-items: center;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1rem;
+
+      @media (800px < width) {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
 
       & li {
         display: contents;

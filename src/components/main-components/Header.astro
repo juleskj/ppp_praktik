@@ -26,7 +26,7 @@ import Link from "../Link.astro";
     <ul>
       <li>
         <Link
-          link_text="About Me"
+          link_text="Om Mig"
           link_url="/#about"
           size="medium"
           variant="transparent_theme"
@@ -82,10 +82,8 @@ import Link from "../Link.astro";
     }
 
     ul {
-      display: flex;
-      flex-flow: wrap row;
-      justify-content: center;
-      align-items: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 1rem;
     }
 
