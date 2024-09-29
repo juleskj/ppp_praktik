@@ -16,14 +16,16 @@ const { hText, shape } = Astro.props;
     text-transform: capitalize;
   }
 
-  h2::before {
-    content: "";
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-right: calc(var(--shape-width) * -0.5);
-    min-width: var(--shape-width);
-    min-height: var(--shape-width);
+  @media (800px < width) {
+    h2::before {
+      content: "";
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-right: calc(var(--shape-width) * -0.5);
+      min-width: var(--shape-width);
+      min-height: var(--shape-width);
+    }
   }
 
   .blue_shape::before {

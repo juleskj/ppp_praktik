@@ -1,0 +1,84 @@
+---
+import HeaderShape from "./HeaderShape.astro";
+---
+
+<script>
+  // Array af classer med baggrunds farver
+  const colors = [
+    "color-orange",
+    "color-white",
+    "color-yellow",
+    "color-blue",
+    "color-lightBlue",
+  ];
+
+  // sætter en random baggrund til hvert directe barn af classen scramble
+  const words = document.querySelectorAll(".scramble > *");
+
+  words.forEach((word) => {
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    word.classList.add(randomColor);
+  });
+</script>
+<article>
+  <HeaderShape shape="yellow_moon" hText="nogle ord som beskriver mig" />
+  <h3>og ting som jeg kan <em>lide</em></h3>
+
+  <div class="scramble">
+    <p>kunstner</p>
+    <p>kreativ</p>
+    <p>te</p>
+    <p>gamer</p>
+    <p>cykle</p>
+    <p>lego</p>
+    <p>museumer</p>
+    <p>kode</p>
+    <p>glad</p>
+    <p>energisk</p>
+    <p>hækle</p>
+    <p>sjove øreringe</p>
+    <p>faverigt tøj</p>
+    <p>lærenem</p>
+    <p>god kolega</p>
+  </div>
+</article>
+
+<style>
+  article {
+    padding: 100px 0;
+  }
+
+  .scramble {
+    padding: 50px 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem 0.5rem;
+    & > * {
+      text-transform: uppercase;
+      padding-inline: var(--even-padding-m);
+      border-radius: var(--border-radius);
+    }
+  }
+
+  .color-yellow {
+    background-color: var(--yellow);
+  }
+
+  .color-white {
+    background-color: var(--white);
+  }
+  .color-orange {
+    background-color: var(--orange);
+    color: var(--white);
+  }
+  .color-lightBlue {
+    background-color: var(--light-blue);
+  }
+
+  .color-blue {
+    background-color: var(--blue);
+    color: var(--white);
+  }
+</style>
