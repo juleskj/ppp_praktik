@@ -8,8 +8,44 @@ import CardLayout from "../layouts/CardLayout.astro";
 import ShapeDiv from "../components/ShapeDiv.astro";
 ---
 
+<script>
+  // Array af classer med baggrunds farver
+  const colors = [
+    "color-orange",
+    "color-white",
+    "color-yellow",
+    "color-blue",
+    "color-lightBlue",
+  ];
+
+  // sætter en random baggrund til hvert ord
+  const words = document.querySelectorAll(".scramble p");
+  words.forEach((word) => {
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    word.classList.add(randomColor);
+  });
+</script>
+
 <Layout title="JKJ">
   <HeroText hero_text="Julie K. Jensen" />
+
+  <div class="scramble">
+    <p>kunstner</p>
+    <p>kreativ</p>
+    <p>te</p>
+    <p>gamer</p>
+    <p>cykle</p>
+    <p>lego</p>
+    <p>museumer</p>
+    <p>glad</p>
+    <p>energisk</p>
+    <p>hækle</p>
+    <p>sjove øreringe</p>
+    <p>faverigt tøj</p>
+    <p>lærenem</p>
+    <p>god kolega</p>
+  </div>
+
   <article id="about">
     <ShapeDiv shape="yellow" duration="duration4s" position="bottom_right">
       <HeaderShape hText="Hej! mit navn er Julie" shape="orange_shape" />
@@ -120,6 +156,40 @@ import ShapeDiv from "../components/ShapeDiv.astro";
 </Layout>
 
 <style>
+  .scramble {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem 0.5rem;
+    & > * {
+      text-transform: uppercase;
+      padding-inline: var(--even-padding-m);
+
+      border-radius: var(--border-radius);
+      text-align: center;
+    }
+  }
+
+  .color-yellow {
+    background-color: var(--yellow);
+  }
+
+  .color-white {
+    background-color: var(--white);
+  }
+  .color-orange {
+    background-color: var(--orange);
+    color: var(--white);
+  }
+  .color-lightBlue {
+    background-color: var(--light-blue);
+  }
+
+  .color-blue {
+    background-color: var(--blue);
+    color: var(--white);
+  }
   #projekts {
     padding: 100px 0;
 
