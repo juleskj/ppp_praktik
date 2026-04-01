@@ -28,6 +28,9 @@ const { hText, shape } = Astro.props;
     }
   }
 
+  .no_shape::before {
+    display: none;
+  }
   .blue_shape::before {
     background-image: url("/img/blue_form.svg");
   }
